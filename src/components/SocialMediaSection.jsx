@@ -10,8 +10,6 @@ const videos = [
     link: "https://www.tiktok.com/@iluvpabie/video/7456400169941208325",
     preview: "/social/video-1.mp4",
     category: "Customer Experience",
-    description:
-      "A real customer moment showing the atmosphere, enjoyment, and natural energy around Mkhulu’s On Main.",
   },
   {
     title: "Traditional Foods",
@@ -19,8 +17,6 @@ const videos = [
     link: "https://www.tiktok.com/@mkhulus.on.main/video/7556117226600795409",
     preview: "/social/video-2.mp4",
     category: "Food Showcase",
-    description:
-      "A closer look at authentic traditional flavour, plated with pride and presented through real visual storytelling.",
   },
   {
     title: "Customer Mini Vlog",
@@ -28,8 +24,6 @@ const videos = [
     link: "https://www.tiktok.com/@ms_khundo0/video/7450188713570733318",
     preview: "/social/video-3.mp4",
     category: "Guest Moments",
-    description:
-      "Another real visitor perspective capturing the experience, presence, and social vibe of the space.",
   },
   {
     title: "Kota, View & Vibe",
@@ -37,8 +31,6 @@ const videos = [
     link: "https://www.tiktok.com/@mkhulus.on.main/video/7447607489664781574",
     preview: "/social/video-4.mp4",
     category: "Atmosphere",
-    description:
-      "Food, setting, and visual energy brought together in a short-form moment that reflects the Mkhulu’s mood.",
   },
   {
     title: "Kids Easter Egg Hunt",
@@ -46,8 +38,6 @@ const videos = [
     link: "https://www.tiktok.com/@mkhulus.on.main/video/7355007991365586181",
     preview: "/social/video-5.mp4",
     category: "Family Events",
-    description:
-      "A family-focused event moment showing that Mkhulu’s is more than food — it is also community and experience.",
   },
   {
     title: "Ice Cream Date",
@@ -55,8 +45,6 @@ const videos = [
     link: "https://www.tiktok.com/@mkhulus.on.main/video/7553563118299827457",
     preview: "/social/video-6.mp4",
     category: "Desserts & Moments",
-    description:
-      "A softer lifestyle moment that adds personality, variety, and a more playful side to the brand story.",
   },
   {
     title: "Kiddies Fun Day",
@@ -64,8 +52,6 @@ const videos = [
     link: "https://www.tiktok.com/@mkhulus.on.main/video/7398427347008998661",
     preview: "/social/video-7.mp4",
     category: "Community & Family",
-    description:
-      "A community-centred visual that reinforces warmth, inclusiveness, and memorable family-friendly experiences.",
   },
 ];
 
@@ -154,7 +140,10 @@ function VideoCard({ video, index, openViewer }) {
                   boxShadow: "0 10px 30px rgba(0,0,0,0.18)",
                 }}
               >
-                <span className="ml-1 text-2xl sm:text-3xl" style={{ color: "#0c1a0e" }}>
+                <span
+                  className="ml-1 text-2xl sm:text-3xl"
+                  style={{ color: "#0c1a0e" }}
+                >
                   ▶
                 </span>
               </div>
@@ -186,12 +175,8 @@ function VideoCard({ video, index, openViewer }) {
             style={{ backgroundColor: "#d4a017" }}
           />
 
-          <p className="text-sm mb-3" style={{ color: "#1b5e20" }}>
+          <p className="text-sm mb-5" style={{ color: "#1b5e20" }}>
             {video.username}
-          </p>
-
-          <p className="text-sm leading-7 sm:leading-8 mb-6" style={{ color: "#4a3828" }}>
-            {video.description}
           </p>
 
           <span
@@ -211,7 +196,7 @@ function VideoCard({ video, index, openViewer }) {
   );
 }
 
-function FullscreenViewer({ video, index, total, onClose, onPrev, onNext }) {
+function FullscreenViewer({ video, onClose, onPrev, onNext }) {
   const playerRef = useRef(null);
 
   useEffect(() => {
@@ -345,23 +330,8 @@ function FullscreenViewer({ video, index, total, onClose, onPrev, onNext }) {
                 style={{ backgroundColor: "#d4a017" }}
               />
 
-              <p className="text-sm mb-4" style={{ color: "#1b5e20" }}>
+              <p className="text-sm mb-6" style={{ color: "#1b5e20" }}>
                 {video.username}
-              </p>
-
-              <span
-                className="inline-flex px-4 py-2 rounded-full text-[10px] uppercase tracking-[0.25em] font-semibold mb-6"
-                style={{
-                  background: "rgba(45,154,71,0.08)",
-                  color: "#2d9a47",
-                  border: "1px solid rgba(45,154,71,0.15)",
-                }}
-              >
-                {video.category}
-              </span>
-
-              <p className="text-sm leading-8 mb-8" style={{ color: "#4a3828" }}>
-                {video.description}
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -394,10 +364,6 @@ function FullscreenViewer({ video, index, total, onClose, onPrev, onNext }) {
                   Close Viewer
                 </button>
               </div>
-
-              <p className="text-xs mt-8" style={{ color: "#9e7d60" }}>
-                {index + 1} / {total}
-              </p>
             </div>
           </div>
         </div>
@@ -479,14 +445,6 @@ export default function SocialMediaSection() {
                 />
                 <span style={{ color: "#d4a017", fontSize: "10px" }}>✦</span>
               </div>
-
-              <p
-                className="max-w-2xl mx-auto text-sm leading-8"
-                style={{ color: "#4a3828" }}
-              >
-                A visual stream of food, people, family moments, and atmosphere
-                that captures the real energy behind Mkhulu’s On Main.
-              </p>
             </div>
           </Reveal>
 
@@ -501,7 +459,8 @@ export default function SocialMediaSection() {
             ))}
           </div>
 
-          <div className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-6"
+          <div
+            className="mt-12 pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-6"
             style={{ borderColor: "rgba(212,160,23,0.18)" }}
           >
             <p
@@ -573,8 +532,6 @@ export default function SocialMediaSection() {
       {activeIndex !== null && (
         <FullscreenViewer
           video={videos[activeIndex]}
-          index={activeIndex}
-          total={videos.length}
           onClose={closeViewer}
           onPrev={showPrev}
           onNext={showNext}
