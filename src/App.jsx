@@ -12,6 +12,7 @@ import ServicesHub from "./components/ServicesHub";
 import BookingFlow from "./components/BookingFlow";
 import Reviews from "./components/Reviews";
 import Gallery from "./components/Gallery";
+import SocialMediaSection from "./components/SocialMediaSection";
 import Events from "./components/Events";
 import FAQ from "./components/FAQ";
 import LeadCapture from "./components/LeadCapture";
@@ -31,6 +32,7 @@ function Home() {
       <BookingFlow />
       <Reviews />
       <Gallery />
+      <SocialMediaSection />
       <Events />
       <FAQ />
       <LeadCapture />
