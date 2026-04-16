@@ -126,15 +126,23 @@ function ReelCard({ video, index, openViewer }) {
 
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
-                className="flex h-14 w-14 items-center justify-center rounded-full"
+                className="flex items-center justify-center rounded-full border border-white/30 bg-white/18 backdrop-blur-sm"
                 style={{
-                  background: "rgba(255,255,255,0.92)",
-                  boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
+                  width: "56px",
+                  height: "56px",
+                  boxShadow: "0 8px 24px rgba(0,0,0,0.18)",
                 }}
               >
-                <span className="ml-1 text-2xl" style={{ color: "#0c1a0e" }}>
-                  ▶
-                </span>
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    marginLeft: "4px",
+                    borderTop: "8px solid transparent",
+                    borderBottom: "8px solid transparent",
+                    borderLeft: "14px solid rgba(255,255,255,0.95)",
+                  }}
+                />
               </div>
             </div>
 
@@ -294,7 +302,7 @@ export default function SocialMediaSection() {
     <>
       <section
         id="social-media"
-        className="py-20 md:py-24 relative overflow-hidden"
+        className="py-28 relative overflow-hidden"
         style={{ backgroundColor: "#faf8f3" }}
       >
         <div
@@ -307,7 +315,7 @@ export default function SocialMediaSection() {
 
         <div className="max-w-7xl mx-auto px-6 relative">
           <Reveal>
-            <div className="text-center max-w-3xl mx-auto mb-14 relative">
+            <div className="text-center max-w-3xl mx-auto mb-20 relative">
               <p
                 className="tracking-[0.35em] uppercase text-xs font-semibold mb-4"
                 style={{ color: "#2d9a47" }}
@@ -316,14 +324,14 @@ export default function SocialMediaSection() {
               </p>
 
               <h2
-                className="text-4xl md:text-6xl font-bold mb-2 leading-tight"
+                className="text-5xl md:text-6xl font-bold mb-2 leading-tight"
                 style={{ color: "#0c1a0e" }}
               >
                 Follow Us for
               </h2>
 
               <h2
-                className="text-4xl md:text-6xl font-bold italic mb-8 leading-tight"
+                className="text-5xl md:text-6xl font-bold italic mb-8 leading-tight"
                 style={{ color: "#1b5e20" }}
               >
                 Real Moments
@@ -339,7 +347,7 @@ export default function SocialMediaSection() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
             {videos.map((video, index) => (
               <ReelCard
                 key={video.title + index}

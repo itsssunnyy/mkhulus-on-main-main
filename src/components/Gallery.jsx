@@ -190,7 +190,7 @@ export default function Gallery() {
     <>
       <section
         id="gallery"
-        className="py-20 md:py-24 relative overflow-hidden"
+        className="py-28 relative overflow-hidden"
         style={{ backgroundColor: "#faf8f3" }}
       >
         <div
@@ -203,7 +203,7 @@ export default function Gallery() {
 
         <div className="max-w-7xl mx-auto px-6 relative">
           <Reveal>
-            <div className="text-center max-w-3xl mx-auto mb-14 relative">
+            <div className="text-center max-w-3xl mx-auto mb-20 relative">
               <p
                 className="tracking-[0.35em] uppercase text-xs font-semibold mb-4"
                 style={{ color: "#2d9a47" }}
@@ -212,14 +212,14 @@ export default function Gallery() {
               </p>
 
               <h2
-                className="text-4xl md:text-6xl font-bold mb-2 leading-tight"
+                className="text-5xl md:text-6xl font-bold mb-2 leading-tight"
                 style={{ color: "#0c1a0e" }}
               >
                 See The
               </h2>
 
               <h2
-                className="text-4xl md:text-6xl font-bold italic mb-8 leading-tight"
+                className="text-5xl md:text-6xl font-bold italic mb-8 leading-tight"
                 style={{ color: "#1b5e20" }}
               >
                 Experience
@@ -243,7 +243,7 @@ export default function Gallery() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
             {galleryItems.map((item, index) => (
               <GalleryCard
                 key={item.title}
