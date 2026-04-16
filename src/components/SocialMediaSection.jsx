@@ -75,6 +75,13 @@ function ReelCard({ video, index, openViewer }) {
             border: "1px solid rgba(212,160,23,0.16)",
             boxShadow: "0 10px 24px rgba(0,0,0,0.06)",
           }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow =
+              "0 18px 35px rgba(45,154,71,0.22), 0 0 28px rgba(45,154,71,0.16)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "0 10px 24px rgba(0,0,0,0.06)";
+          }}
         >
           <div className="relative">
             <div className="aspect-[3/4] overflow-hidden bg-[#f5f1e8]">
@@ -112,7 +119,8 @@ function ReelCard({ video, index, openViewer }) {
                 e.currentTarget.style.transform = "translateY(-2px) scale(1.05)";
                 e.currentTarget.style.background = "#1b5e20";
                 e.currentTarget.style.color = "#ffffff";
-                e.currentTarget.style.boxShadow = "0 0 22px rgba(45,154,71,0.28)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 22px rgba(45,154,71,0.28)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "";
@@ -125,25 +133,25 @@ function ReelCard({ video, index, openViewer }) {
             </a>
 
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-  <div
-    className="flex h-14 w-14 items-center justify-center rounded-full border border-white/30 backdrop-blur-sm"
-    style={{
-      background: "rgba(255,255,255,0.12)",
-      boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
-    }}
-  >
-    <div
-      style={{
-        width: 0,
-        height: 0,
-        marginLeft: "4px",
-        borderTop: "8px solid transparent",
-        borderBottom: "8px solid transparent",
-        borderLeft: "14px solid rgba(255,255,255,0.95)",
-      }}
-    />
-  </div>
-</div>
+              <div
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-white/30 backdrop-blur-sm"
+                style={{
+                  background: "rgba(255,255,255,0.12)",
+                  boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
+                }}
+              >
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    marginLeft: "4px",
+                    borderTop: "8px solid transparent",
+                    borderBottom: "8px solid transparent",
+                    borderLeft: "14px solid rgba(255,255,255,0.95)",
+                  }}
+                />
+              </div>
+            </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-4">
               <h3
@@ -343,6 +351,11 @@ export default function SocialMediaSection() {
                 />
                 <span style={{ color: "#d4a017", fontSize: "10px" }}>✦</span>
               </div>
+
+              <p className="mt-2 text-sm sm:text-base text-center text-[#6b6b6b] max-w-xl mx-auto mb-10">
+                A glimpse into the flavour, energy, and real experiences at
+                Mkhulu’s On Main.
+              </p>
             </div>
           </Reveal>
 
@@ -383,6 +396,19 @@ export default function SocialMediaSection() {
                   border: "1px solid rgba(212,160,23,0.22)",
                   boxShadow: "0 8px 20px rgba(0,0,0,0.06)",
                 }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-3px) scale(1.06)";
+                  e.currentTarget.style.color = "#d4a017";
+                  e.currentTarget.style.borderColor = "rgba(212,160,23,0.45)";
+                  e.currentTarget.style.boxShadow =
+                    "0 0 18px rgba(212,160,23,0.28), 0 0 28px rgba(45,154,71,0.22)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "";
+                  e.currentTarget.style.color = "#1b5e20";
+                  e.currentTarget.style.borderColor = "rgba(212,160,23,0.22)";
+                  e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.06)";
+                }}
               >
                 <FaInstagram size={18} />
               </a>
@@ -401,6 +427,19 @@ export default function SocialMediaSection() {
                   border: "1px solid rgba(212,160,23,0.22)",
                   boxShadow: "0 8px 20px rgba(0,0,0,0.06)",
                 }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-3px) scale(1.06)";
+                  e.currentTarget.style.color = "#d4a017";
+                  e.currentTarget.style.borderColor = "rgba(212,160,23,0.45)";
+                  e.currentTarget.style.boxShadow =
+                    "0 0 18px rgba(212,160,23,0.28), 0 0 28px rgba(45,154,71,0.22)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "";
+                  e.currentTarget.style.color = "#1b5e20";
+                  e.currentTarget.style.borderColor = "rgba(212,160,23,0.22)";
+                  e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.06)";
+                }}
               >
                 <SiTiktok size={18} />
               </a>
@@ -418,6 +457,19 @@ export default function SocialMediaSection() {
                   color: "#1b5e20",
                   border: "1px solid rgba(212,160,23,0.22)",
                   boxShadow: "0 8px 20px rgba(0,0,0,0.06)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-3px) scale(1.06)";
+                  e.currentTarget.style.color = "#d4a017";
+                  e.currentTarget.style.borderColor = "rgba(212,160,23,0.45)";
+                  e.currentTarget.style.boxShadow =
+                    "0 0 18px rgba(212,160,23,0.28), 0 0 28px rgba(45,154,71,0.22)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "";
+                  e.currentTarget.style.color = "#1b5e20";
+                  e.currentTarget.style.borderColor = "rgba(212,160,23,0.22)";
+                  e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.06)";
                 }}
               >
                 <FaFacebookF size={17} />
