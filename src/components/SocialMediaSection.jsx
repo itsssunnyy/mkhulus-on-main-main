@@ -125,18 +125,25 @@ function ReelCard({ video, index, openViewer }) {
             </a>
 
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div
-                className="flex h-14 w-14 items-center justify-center rounded-full"
-                style={{
-                  background: "rgba(255,255,255,0.92)",
-                  boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
-                }}
-              >
-                <span className="ml-1 text-2xl" style={{ color: "#0c1a0e" }}>
-                  ▶
-                </span>
-              </div>
-            </div>
+  <div
+    className="flex h-14 w-14 items-center justify-center rounded-full border border-white/30 backdrop-blur-sm"
+    style={{
+      background: "rgba(255,255,255,0.12)",
+      boxShadow: "0 10px 28px rgba(0,0,0,0.18)",
+    }}
+  >
+    <div
+      style={{
+        width: 0,
+        height: 0,
+        marginLeft: "4px",
+        borderTop: "8px solid transparent",
+        borderBottom: "8px solid transparent",
+        borderLeft: "14px solid rgba(255,255,255,0.95)",
+      }}
+    />
+  </div>
+</div>
 
             <div className="absolute bottom-0 left-0 right-0 p-4">
               <h3
@@ -339,7 +346,7 @@ export default function SocialMediaSection() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {videos.map((video, index) => (
               <ReelCard
                 key={video.title + index}
