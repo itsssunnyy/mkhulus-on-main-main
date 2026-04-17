@@ -130,21 +130,21 @@ export default function About() {
                 className="relative w-full h-[26rem] rounded-[28px] overflow-hidden group"
                 style={{
                   border: "1px solid rgba(212,160,23,0.22)",
-                  boxShadow: "0 20px 60px rgba(0,0,0,0.14)",
                   background: "#0c1a0e",
                 }}
               >
                 <img
-                  src="/gallery/exterior-1.jpg"
+                  src="/gallery/about-new.jpg"
                   alt="Mkhulu's On Main exterior"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.08]"
                 />
 
+                {/* ✅ PERFECT BALANCED OVERLAY */}
                 <div
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(180deg, rgba(0,0,0,0.06) 0%, rgba(12,26,14,0.55) 100%)",
+                      "linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%)",
                   }}
                 />
 

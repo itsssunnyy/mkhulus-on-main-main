@@ -72,6 +72,18 @@ const menuSections = [
       { name: "Quarter Chicken with Chips", price: "R60" },
     ],
   },
+
+  // ✅ NEW SECTION
+  {
+    title: "Healthy Meals",
+    items: [
+      { name: "Chicken Shawarma", price: "R70" },
+      { name: "Chicken Wrap", price: "R60" },
+      { name: "Beef Wrap", price: "R70" },
+      { name: "Beef Shawarma", price: "R80" },
+    ],
+  },
+
   {
     title: "Traditional Meals",
     items: [
@@ -81,6 +93,30 @@ const menuSections = [
       { name: "Ox Liver / Chicken Liver with Pap or Samp", price: "R60" },
     ],
   },
+
+  // ✅ NEW SECTION
+  {
+    title: "Kiddies Menu",
+    items: [
+      { name: "Chicken Strips with Chips + Juice", price: "R60" },
+      { name: "Chicken Pops with Chips + Juice", price: "R60" },
+      { name: "Kiddies Burger Meal", price: "R70" },
+      { name: "Waffle", price: "R50" },
+      { name: "Loaded Fries", price: "R40" },
+    ],
+  },
+
+  // ✅ NEW SECTION
+  {
+    title: "Ice Cream & Desserts",
+    items: [
+      { name: "Small Tub", price: "R30" },
+      { name: "Plain Tub", price: "R75" },
+      { name: "Classic Waffle", price: "R40" },
+      { name: "Oreo / Chocolate Waffle", price: "R75" },
+    ],
+  },
+
   {
     title: "Cold Drinks",
     items: [
@@ -93,6 +129,8 @@ const menuSections = [
       { name: "2 Litre Sprite", price: "R35" },
     ],
   },
+
+  // ✅ CLEANED (NO COCKTAILS HERE)
   {
     title: "Alcohol",
     items: [
@@ -102,6 +140,13 @@ const menuSections = [
       { name: "Savanna", price: "R35" },
       { name: "Flying Fish", price: "R35" },
       { name: "Hunter's Dry", price: "R35" },
+    ],
+  },
+
+  // ✅ NEW SECTION
+  {
+    title: "Cocktails",
+    items: [
       { name: "Mojito", price: "R80" },
       { name: "Long Island", price: "R80" },
       { name: "Strawberry Daiquiri", price: "R80" },

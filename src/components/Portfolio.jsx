@@ -8,7 +8,7 @@ const portfolioItems = [
       "A bold showcase of flavour, generosity, and kasi food culture that makes Mkhulu’s a destination for people who want more than just a quick meal.",
     outcome:
       "Builds appetite, curiosity, and stronger first impressions for new visitors.",
-    image: "/gallery/traditional-food.jpg",
+    image: "/gallery/kota-experience.jpg",
   },
   {
     title: "Family Dining Atmosphere",
@@ -17,7 +17,7 @@ const portfolioItems = [
       "A warm and welcoming setting for friends, families, and casual gatherings where the environment feels lively, local, and memorable.",
     outcome:
       "Strengthens trust with guests looking for comfort, warmth, and repeat visits.",
-    image: "/gallery/guests.jpg",
+    image: "/gallery/family-dining.jpg",
   },
   {
     title: "Private Events & Moments",
@@ -26,7 +26,7 @@ const portfolioItems = [
       "A section that positions Mkhulu’s as a place for birthdays, celebrations, hosted gatherings, and meaningful occasions.",
     outcome:
       "Creates a stronger pathway for event bookings and premium enquiries.",
-    image: "/gallery/events.jpg",
+    image: "/gallery/private-events.jpg",
   },
   {
     title: "Platters & Shared Meals",
@@ -35,7 +35,7 @@ const portfolioItems = [
       "A refined presentation of larger meals, platters, and shared dining experiences designed for groups and elevated occasions.",
     outcome:
       "Supports bigger-order thinking and future catering-style growth.",
-    image: "/gallery/platters.jpg",
+    image: "/gallery/shared-platters.jpg",
   },
 ];
 
