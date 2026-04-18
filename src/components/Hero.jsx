@@ -4,13 +4,26 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-screen md:min-h-[88vh] flex items-center justify-center px-6 pt-24 sm:pt-28 md:pt-28 pb-16 md:pb-16"
+      className="relative overflow-hidden min-h-screen md:min-h-[88vh] flex items-center justify-center px-6 pt-20 sm:pt-24 md:pt-24 pb-10 md:pb-12"
       style={{
         background: "rgba(3,8,5,1)",
       }}
     >
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/social/hero.mp4" type="video/mp4" />
+      </video>
+
+      <div className="absolute top-0 left-0 w-full h-full bg-black/55 z-10"></div>
+
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none z-10"
         style={{
           background:
             "linear-gradient(90deg, rgba(18,53,25,0.10) 0%, rgba(212,160,23,0.07) 50%, rgba(18,53,25,0.10) 100%)",
@@ -18,25 +31,25 @@ export default function Hero() {
       />
 
       <div
-        className="absolute inset-0 pointer-events-none hidden md:block"
+        className="absolute inset-0 pointer-events-none hidden md:block z-10"
         style={{
           background:
-            "radial-gradient(circle at 50% 38%, rgba(245,244,232,0.72) 0%, rgba(245,244,232,0.28) 18%, rgba(45,154,71,0.10) 34%, rgba(8,22,12,0.88) 58%, rgba(3,8,5,1) 100%)",
+            "radial-gradient(circle at 50% 38%, rgba(245,244,232,0.32) 0%, rgba(245,244,232,0.12) 18%, rgba(45,154,71,0.08) 34%, rgba(8,22,12,0.84) 58%, rgba(3,8,5,0.96) 100%)",
         }}
       />
 
-        <div
-        className="absolute inset-0 pointer-events-none md:hidden"
+      <div
+        className="absolute inset-0 pointer-events-none md:hidden z-10"
         style={{
           background:
-            "radial-gradient(circle at 50% 30%, rgba(245,244,232,0.58) 0%, rgba(245,244,232,0.22) 16%, rgba(45,154,71,0.08) 30%, rgba(8,22,12,0.92) 50%, rgba(3,8,5,1) 78%)",
+            "radial-gradient(circle at 50% 30%, rgba(245,244,232,0.24) 0%, rgba(245,244,232,0.10) 16%, rgba(45,154,71,0.06) 30%, rgba(8,22,12,0.88) 50%, rgba(3,8,5,0.96) 78%)",
         }}
-/>   
+      />
 
-      <div className="relative max-w-6xl mx-auto text-center w-full">
+      <div className="relative z-20 max-w-6xl mx-auto text-center w-full">
         <Reveal>
           <p
-            className="text-[10px] sm:text-xs uppercase tracking-[0.36em] sm:tracking-[0.42em] font-semibold mb-6 sm:mb-8 px-2"
+            className="text-[10px] sm:text-xs uppercase tracking-[0.36em] sm:tracking-[0.42em] font-semibold mb-4 sm:mb-6 px-2"
             style={{ color: "#d4a017" }}
           >
             Authentic Kasi Dining Experience
@@ -45,7 +58,7 @@ export default function Hero() {
 
         <Reveal delay={80}>
           <h1
-            className="font-['Playfair_Display'] font-bold leading-[0.92] text-[3.2rem] sm:text-[5.4rem] md:text-[6.4rem] lg:text-[7.2rem]"
+            className="font-['Playfair_Display'] font-bold leading-[0.92] text-[3rem] sm:text-[4.8rem] md:text-[5.8rem] lg:text-[6.6rem]"
             style={{ color: "#f8f6f0" }}
           >
             Mkhulu&apos;s
@@ -54,7 +67,7 @@ export default function Hero() {
 
         <Reveal delay={140}>
           <h2
-            className="font-['Playfair_Display'] italic font-medium leading-none text-[1.9rem] sm:text-[3rem] md:text-[3.4rem] lg:text-[4.1rem] mt-2 sm:mt-3"
+            className="font-['Playfair_Display'] italic font-medium leading-none text-[1.8rem] sm:text-[2.7rem] md:text-[3.1rem] lg:text-[3.8rem] mt-1 sm:mt-2"
             style={{
               color: "#d4a017",
               textShadow: `
@@ -69,7 +82,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={200}>
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mt-7 sm:mt-10 md:mt-9">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mt-5 sm:mt-6 md:mt-6">
             <div
               className="h-px w-14 sm:w-16 md:w-20"
               style={{ backgroundColor: "rgba(212,160,23,0.75)" }}
@@ -88,9 +101,9 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={260}>
-          <div className="mt-7 sm:mt-10 md:mt-9 leading-tight px-2">
+          <div className="mt-5 sm:mt-6 md:mt-6 leading-tight px-2">
             <p
-              className="font-['Playfair_Display'] italic font-medium text-[1.15rem] sm:text-[2rem] md:text-[2.2rem] lg:text-[2.6rem]"
+              className="font-['Playfair_Display'] italic font-medium text-[1.05rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.4rem]"
               style={{
                 color: "#4d9b49",
                 textShadow: `
@@ -104,7 +117,7 @@ export default function Hero() {
             </p>
 
             <p
-              className="font-['Playfair_Display'] italic font-medium text-[1.15rem] sm:text-[2rem] md:text-[2.2rem] lg:text-[2.6rem] -mt-1"
+              className="font-['Playfair_Display'] italic font-medium text-[1.05rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.4rem] -mt-1"
               style={{
                 color: "#4d9b49",
                 textShadow: `
@@ -121,7 +134,7 @@ export default function Hero() {
 
         <Reveal delay={320}>
           <p
-            className="max-w-3xl mx-auto mt-7 sm:mt-10 md:mt-9 text-[14px] sm:text-lg md:text-[1.02rem] leading-7 sm:leading-8 md:leading-8 px-2"
+            className="max-w-3xl mx-auto mt-5 sm:mt-6 md:mt-6 text-[13px] sm:text-base md:text-[1rem] leading-6 sm:leading-7 md:leading-7 px-2"
             style={{ color: "rgba(248,246,240,0.88)" }}
           >
             Premium kota culture, authentic kasi flavour, and a warm destination
@@ -131,7 +144,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={380}>
-          <div className="mt-10 sm:mt-12 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-7 sm:mt-8 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#menu"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] transition-all duration-300"
@@ -208,7 +221,7 @@ export default function Hero() {
 
         <Reveal delay={440}>
           <div
-            className="mt-10 sm:mt-12 md:mt-10 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.28em] px-2"
+            className="mt-7 sm:mt-8 md:mt-8 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.28em] px-2"
             style={{ color: "rgba(248,246,240,0.72)" }}
           >
             <span>Open Today</span>
