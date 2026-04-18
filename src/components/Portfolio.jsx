@@ -98,13 +98,29 @@ export default function Portfolio() {
           {portfolioItems.map((item, index) => (
             <Reveal key={item.title} delay={index * 120}>
               <div
-                className="group rounded-[24px] overflow-hidden transition-all duration-500 hover:-translate-y-2"
-                style={{
-                  background: "#ffffff",
-                  border: "1px solid rgba(212,160,23,0.2)",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
-                }}
-              >
+  className="group rounded-[24px] overflow-hidden transition-all duration-500 hover:-translate-y-2"
+  style={{
+    background: "#ffffff",
+    border: "1px solid rgba(212,160,23,0.2)",
+    boxShadow: `
+      0 10px 30px rgba(0,0,0,0.06),
+      0 0 0 rgba(45,154,71,0)
+    `,
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.boxShadow = `
+      0 18px 40px rgba(0,0,0,0.10),
+      0 0 25px rgba(45,154,71,0.25),
+      0 0 60px rgba(45,154,71,0.15)
+    `;
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.boxShadow = `
+      0 10px 30px rgba(0,0,0,0.06),
+      0 0 0 rgba(45,154,71,0)
+    `;
+  }}
+>
                 <div className="relative h-72 overflow-hidden">
                   <img
                     src={item.image}
