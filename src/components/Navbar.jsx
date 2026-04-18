@@ -41,10 +41,10 @@ export default function Navbar() {
         "contact",
       ];
 
-      for (let section of sections) {
+      for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
-          const top = el.offsetTop - 140;
+          const top = el.offsetTop - 120;
           const bottom = top + el.offsetHeight;
 
           if (scrollY >= top && scrollY < bottom) {
@@ -89,16 +89,16 @@ export default function Navbar() {
         boxShadow: scrolled ? "0 10px 30px rgba(0,0,0,0.25)" : "none",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-2.5 flex items-center">
-        <a href="#home" className="flex flex-col leading-[1.1] group shrink-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2.5 flex items-center gap-3">
+        <a href="#home" className="flex flex-col leading-[1.05] group shrink-0 min-w-0">
           <span
-            className="font-['Playfair_Display'] text-2xl font-bold tracking-wide transition-all duration-300"
+            className="font-['Playfair_Display'] text-[1.35rem] sm:text-2xl font-bold tracking-wide transition-all duration-300 truncate"
             style={{ color: "#f5f1e8" }}
           >
             Mkhulu&apos;s
           </span>
           <span
-            className="text-xs tracking-[0.35em] uppercase font-light"
+            className="text-[10px] sm:text-xs tracking-[0.28em] sm:tracking-[0.35em] uppercase font-light truncate"
             style={{ color: "#d4af37" }}
           >
             On Main
@@ -203,7 +203,7 @@ export default function Navbar() {
 
           <a
             href="#events"
-            className="ml-auto inline-block text-xs font-semibold px-5 py-2.5 rounded-full tracking-[0.16em] uppercase transition-all duration-300 active:scale-95 active:brightness-110 whitespace-nowrap"
+            className="ml-auto inline-flex items-center justify-center text-xs font-semibold px-5 py-2.5 rounded-full tracking-[0.16em] uppercase transition-all duration-300 active:scale-95 active:brightness-110 whitespace-nowrap"
             style={{
               background: "linear-gradient(135deg, #1e6b30, #2d9a47)",
               color: "#ffffff",
@@ -228,10 +228,11 @@ export default function Navbar() {
         </div>
 
         <button
-          className="ml-auto lg:hidden"
-          style={{ color: "#f5f1e8" }}
+          className="ml-auto lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-full shrink-0"
+          style={{ color: "#f5f1e8", WebkitTapHighlightColor: "transparent" }}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
           <svg
             className="w-6 h-6"
@@ -260,7 +261,7 @@ export default function Navbar() {
 
       {open && (
         <div
-          className="lg:hidden px-6 pb-6 border-t"
+          className="lg:hidden px-4 sm:px-6 pb-6 border-t"
           style={{
             background: "rgba(8,12,10,0.94)",
             borderColor: "rgba(212,175,55,0.12)",
@@ -273,7 +274,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-xs tracking-[0.16em] uppercase font-medium transition-all duration-200 active:scale-[0.98]"
+                  className="block text-sm tracking-[0.14em] uppercase font-medium transition-all duration-200 active:scale-[0.98] py-1"
                   style={{
                     color:
                       active === link.href.replace("#", "")
@@ -291,7 +292,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-5 inline-block text-xs font-semibold px-5 py-2.5 rounded-full tracking-[0.16em] uppercase transition-all duration-300"
+            className="mt-5 w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] text-xs font-semibold px-5 py-3 rounded-full tracking-[0.16em] uppercase transition-all duration-300"
             style={{
               background: "linear-gradient(135deg, #d4af37, #8d6b1f)",
               color: "#111111",
