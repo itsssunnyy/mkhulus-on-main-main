@@ -14,7 +14,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/social/hero.mp4" type="video/mp4" />
@@ -42,14 +42,14 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none md:hidden z-10"
         style={{
           background:
-            "radial-gradient(circle at 50% 30%, rgba(245,244,232,0.24) 0%, rgba(245,244,232,0.10) 16%, rgba(45,154,71,0.06) 30%, rgba(8,22,12,0.88) 50%, rgba(3,8,5,0.96) 78%)",
+            "radial-gradient(circle at 50% 30%, rgba(245,244,232,0.16) 0%, rgba(245,244,232,0.06) 16%, rgba(45,154,71,0.05) 30%, rgba(8,22,12,0.88) 50%, rgba(3,8,5,0.96) 78%)",
         }}
       />
 
       <div className="relative z-20 max-w-6xl mx-auto text-center w-full">
         <Reveal>
           <p
-            className="text-[10px] sm:text-xs uppercase tracking-[0.36em] sm:tracking-[0.42em] font-semibold mb-4 sm:mb-6 px-2"
+            className="text-[10px] sm:text-xs uppercase tracking-[0.32em] sm:tracking-[0.42em] font-semibold mb-4 sm:mb-6 px-2"
             style={{ color: "#d4a017" }}
           >
             Authentic Kasi Dining Experience
@@ -103,7 +103,21 @@ export default function Hero() {
         <Reveal delay={260}>
           <div className="mt-5 sm:mt-6 md:mt-6 leading-tight px-2">
             <p
-              className="font-['Playfair_Display'] italic font-medium text-[1.05rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.4rem]"
+              className="sm:hidden font-['Playfair_Display'] italic font-medium text-[0.95rem]"
+              style={{
+                color: "#4d9b49",
+                textShadow: `
+                  0 0 10px rgba(45,154,71,0.35),
+                  0 0 20px rgba(45,154,71,0.25),
+                  0 0 35px rgba(45,154,71,0.15)
+                `,
+              }}
+            >
+              The Best Or Nothing, It&apos;s Real McCoy
+            </p>
+
+            <p
+              className="hidden sm:block font-['Playfair_Display'] italic font-medium text-[1.7rem] md:text-[2rem] lg:text-[2.4rem]"
               style={{
                 color: "#4d9b49",
                 textShadow: `
@@ -117,7 +131,7 @@ export default function Hero() {
             </p>
 
             <p
-              className="font-['Playfair_Display'] italic font-medium text-[1.05rem] sm:text-[1.7rem] md:text-[2rem] lg:text-[2.4rem] -mt-1"
+              className="hidden sm:block font-['Playfair_Display'] italic font-medium text-[1.7rem] md:text-[2rem] lg:text-[2.4rem] -mt-1"
               style={{
                 color: "#4d9b49",
                 textShadow: `
@@ -134,7 +148,14 @@ export default function Hero() {
 
         <Reveal delay={320}>
           <p
-            className="max-w-3xl mx-auto mt-5 sm:mt-6 md:mt-6 text-[13px] sm:text-base md:text-[1rem] leading-6 sm:leading-7 md:leading-7 px-2"
+            className="sm:hidden max-w-[20rem] mx-auto mt-4 text-[13px] leading-6 px-2"
+            style={{ color: "rgba(248,246,240,0.88)" }}
+          >
+            Premium kota culture, and a warm atmosphere for real food lovers.
+          </p>
+
+          <p
+            className="hidden sm:block max-w-3xl mx-auto mt-5 sm:mt-6 md:mt-6 text-base md:text-[1rem] leading-7 md:leading-7 px-2"
             style={{ color: "rgba(248,246,240,0.88)" }}
           >
             Premium kota culture, authentic kasi flavour, and a warm destination
@@ -144,7 +165,47 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={380}>
-          <div className="mt-7 sm:mt-8 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="sm:hidden mt-7 flex flex-col items-center gap-3">
+            <a
+              href="#menu"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-full text-[11px] font-semibold uppercase tracking-[0.2em] transition-all duration-300"
+              style={{
+                background: "rgba(255,255,255,0.08)",
+                color: "#f8f6f0",
+                border: "1px solid rgba(255,255,255,0.14)",
+                boxShadow: "0 10px 24px rgba(0,0,0,0.12)",
+              }}
+            >
+              View Our Menu
+            </a>
+
+            <a
+              href="#order"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #c9a12c, #d4a017)",
+                color: "#0c1a0e",
+                boxShadow: "0 12px 30px rgba(212,160,23,0.22)",
+              }}
+            >
+              Order Ahead
+            </a>
+
+            <div
+              className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[10px] uppercase tracking-[0.18em] px-2"
+              style={{ color: "rgba(248,246,240,0.72)" }}
+            >
+              <span>Old Etwatwa East</span>
+              <span style={{ color: "#d4a017" }}>•</span>
+              <span>Dine-In</span>
+              <span style={{ color: "#d4a017" }}>•</span>
+              <span>Order Ahead</span>
+              <span style={{ color: "#d4a017" }}>•</span>
+              <span>Events &amp; Group Dining</span>
+            </div>
+          </div>
+
+          <div className="hidden sm:flex mt-7 sm:mt-8 md:mt-8 flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#menu"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] transition-all duration-300"
@@ -221,7 +282,7 @@ export default function Hero() {
 
         <Reveal delay={440}>
           <div
-            className="mt-7 sm:mt-8 md:mt-8 flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.28em] px-2"
+            className="hidden sm:flex mt-10 sm:mt-12 md:mt-10 flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.28em] px-2"
             style={{ color: "rgba(248,246,240,0.72)" }}
           >
             <span>Open Today</span>
