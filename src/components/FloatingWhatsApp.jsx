@@ -1,20 +1,37 @@
 import { useEffect, useState } from "react";
 
 export default function FloatingWhatsApp() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   useEffect(() => {
-    const handleOpen = () => setIsVisible(false);
-    const handleClose = () => setIsVisible(true);
+    const updateSectionVisibility = () => {
+      const aboutSection = document.getElementById("about");
+      if (!aboutSection) return;
 
+      const aboutTop = aboutSection.getBoundingClientRect().top;
+      setIsVisible(aboutTop <= window.innerHeight * 0.75);
+    };
+
+    const handleOpen = () => setIsOverlayOpen(true);
+    const handleClose = () => setIsOverlayOpen(false);
+
+    updateSectionVisibility();
+
+    window.addEventListener("scroll", updateSectionVisibility);
+    window.addEventListener("resize", updateSectionVisibility);
     window.addEventListener("overlay:open", handleOpen);
     window.addEventListener("overlay:close", handleClose);
 
     return () => {
+      window.removeEventListener("scroll", updateSectionVisibility);
+      window.removeEventListener("resize", updateSectionVisibility);
       window.removeEventListener("overlay:open", handleOpen);
       window.removeEventListener("overlay:close", handleClose);
     };
   }, []);
+
+  const showButton = isVisible && !isOverlayOpen;
 
   return (
     <a
@@ -23,7 +40,7 @@ export default function FloatingWhatsApp() {
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
       className={`fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[120] transition-all duration-300 ${
-        isVisible
+        showButton
           ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
           : "opacity-0 translate-y-4 scale-95 pointer-events-none"
       }`}
