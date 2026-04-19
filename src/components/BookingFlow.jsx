@@ -48,14 +48,14 @@ export default function BookingFlow() {
               </p>
 
               <h2
-                className="text-5xl md:text-6xl font-bold mb-2 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight"
                 style={{ color: "#0c1a0e" }}
               >
                 A Smoother Way
               </h2>
 
               <h2
-                className="text-5xl md:text-6xl font-bold italic mb-8 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold italic mb-8 leading-tight"
                 style={{ color: "#1b5e20" }}
               >
                 To Start
@@ -122,7 +122,7 @@ export default function BookingFlow() {
 
           <Reveal delay={180}>
             <div
-              className="rounded-[28px] p-8 md:p-10"
+              className="rounded-[28px] p-6 md:p-10"
               style={{
                 background: "#ffffff",
                 border: "1px solid rgba(212,160,23,0.2)",

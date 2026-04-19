@@ -1,4 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Navbar from "./components/Navbar";
@@ -21,7 +29,33 @@ import Contact from "./components/Contact";
 
 import SocialMediaPage from "./pages/SocialMediaPage";
 
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
+  return null;
+}
+
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#menu") {
+      const menuSection = document.getElementById("menu");
+
+      if (menuSection) {
+        setTimeout(() => {
+          menuSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 80);
+      }
+    }
+  }, [location]);
+
   return (
     <main>
       <Hero />
@@ -45,10 +79,13 @@ function Home() {
 export default function App() {
   return (
     <Router>
+       <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/social-media" element={<SocialMediaPage />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
       <FloatingWhatsApp />

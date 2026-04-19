@@ -26,14 +26,14 @@ export default function LeadCapture() {
               </p>
 
               <h2
-                className="text-5xl md:text-6xl font-bold mb-2 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight"
                 style={{ color: "#2c1a0e" }}
               >
                 Stay Closer
               </h2>
 
               <h2
-                className="text-5xl md:text-6xl font-bold italic mb-8 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold italic mb-8 leading-tight"
                 style={{ color: "#4a7c3f" }}
               >
                 To Mkhulu’s
@@ -75,7 +75,7 @@ export default function LeadCapture() {
             </div>
 
             <div
-              className="p-8 md:p-12"
+              className="p-6 md:p-12"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(74,124,63,0.06) 0%, rgba(201,168,130,0.08) 100%)",
